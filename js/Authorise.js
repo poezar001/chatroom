@@ -55,16 +55,15 @@ export class Authorize {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      // update user profile
+    
       await updateProfile(user, {
         displayName: fullname,
         photoURL: this.defaultprofileimg
       });
 
-      await auth.currentuser.reload();
-
+      await auth.currentUser.reload();
       // save username locally
-      this.setLocalName(auth.currentuser);
+      this.setLocalName(auth.currentUser);
 
       // Redirect to index
       // window.location.href = "../index.html";
@@ -142,7 +141,7 @@ export class Authorize {
     onAuthStateChanged(auth, (user) => {
       if (!user) {
         // window.location.href = "../signin.html";
-        this.redirectTo("signin.html.")
+        this.redirectTo("signin.html")
       }
     });
   }

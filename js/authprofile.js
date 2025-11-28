@@ -43,5 +43,5 @@ authObj.getUser((user) => {
 // Logout button
 const logoutbtn = document.querySelector("#logoutbtn");
 logoutbtn.addEventListener("click", () => {
-    authObj.logout();
+    authObj.logoutUser();;
 });

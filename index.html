@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-widht,initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="./css/style.css" rel="stylesheet"/>
+    <title>Chat Room</title>
+    <script src="./js/authcheck.js" type="module"></script>
+
+
+</head>
+
+<body class="bg-light">
+    <div class="container my-5 shadow-lg rounded-4 chat-containers">
+
+        <!-- sidebar -->
+         <aside class="chat-sidebars  d-flex flex-column justify-content-between text-white p-3">
+            <div>
+                <h4 class="text-center mb-4">Chat Rooms</h4>
+                <button type="button" id="general" class="btn w-100 mb-2"><i class="fa-solid fa-comments"></i>#general</button>
+                <button type="button" id="laravel" class="btn w-100 mb-2"><i class="fa-brands fa-laravel"></i>#laravel</button>
+                <button type="button" id="nodejs" class="btn w-100 mb-2"><i class="fa-brands fa-node-js"></i>#nodejs</button>
+
+            </div>
+            <!-- update form -->
+
+            <form class="new-nameform">
+                 <div class="input-group">
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Update your name"/>
+                    <button type="submit" class="btn update-btns"><i class="fa-solid fa-user-pen"></i></button>
+                </div>
+                <div class="small text-success text-center mt-2 update-msg">new name</div>
+            </form>
+         </aside>
+
+        
+
+        <!-- chatbox main area -->
+         <main class="chat-mains d-flex flex-column flex-grow-1">
+            <!-- header -->
+             <header class="p-3 border-bottom d-flex justify-content-between align-items-center chat-headers">
+                <h4 class="m-0"><i class="fa-solid fa-message"></i>Chat Box- <span class="roomtitle"></span></h4>
+
+                <!-- profile button drop down -->
+                <div class="dropdrown">
+                    <button type="button" class="btn btn-outline-secondary dropdrown-toggle" data-bs-toggle="dropdrown">
+                        <i class="fa-solid fa-user-circle me-2"></i>
+                        <span id="profilename">Guest</span>
+                    </button>
+
+                    <ul class="dropdrown-menu">
+                        <li><a href="./profile.html" class="dropdrown-item"><i class=" fa-solid fa-id-badge me-2"></i></a>View Profile</li>
+                    </ul>
+                </div>
+             </header>
+
+
+            
+
+             
+
+
+            <!-- chat message -->
+
+            <div class="chat-contents flex-grow-1 overflow-auto p-3">
+                <ul class="list-group chat-lists">
+                    <!-- <li class="list-group-item">
+                        <span class="username">Bo Bo</span>
+                        <span class="message">How are your</span>
+                        <div class="time">15 mins age</div>
+                    </li> -->
+                </ul>
+            </div>
+
+            <!-- message input -->
+            <form class="border-top p-3 new-chatform">
+                <div class="input-group">
+                    <input type="text" id="message" class="form-control" placeholder="Type your message..."/>
+                    <button type="submit" class="btn send-btns"><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </form>
+         </main>
+
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@3.6.0/cdn.min.js"></script>
+    <script src="./js/chatroom.js" type="module"></script>
+    <script src="./js/MessageUI.js" type="module"></script>
+     <script src="./js/app.js" type="module"></script>  
+    <script src="./js/firebaseconfig.js" type="module"></script>
+
+</body>
+
+</html>
+
+
+
+//12OA

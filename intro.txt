@@ -1,0 +1,69 @@
+https://firebase.google.com
+Click to Go to Console
+Create a project
+Project name : My First Project
+
+Click Continue
+Enable google analytics for this project = uncheck
+Click create project > Continue
+//////////////////////////////////////////////////////////////////////////
+=>Register an app for web
+
+ project overview> project settings > general > web icon
+
+ App nickname = " chatroomapp"
+  Click Register app >  uncheck > 
+  Continue to Console
+
+
+
+=>Get Firebase SDK code (Software Development Kit)
+ project overview> project settings > general > cdn 
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDUxDWgt4fQTeTRsrqsouKP0yUbk8BKDiQ",
+    authDomain: "es6-b2-project.firebaseapp.com",
+    projectId: "es6-b2-project",
+    storageBucket: "es6-b2-project.firebasestorage.app",
+    messagingSenderId: "547281511793",
+    appId: "1:547281511793:web:db8ab68229121f1c3702d0"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+
+
+////////////////////////////////////////////////////////////////
+
+Go to My first project
+Click leftside bar "Project overview > Project settings > You can see your app code
+
+/////////////////////////////////////////////////
+
+=> create database
+
+bulid> firestore database > click create database > 
+1. select edition > Standard edition > click next
+2. database id and location
+
+     id = default
+     location = Singapore
+3. configuration
+
+    prouction-mode
+
+
+=> Error for writting (PERMSSION DENIED)
+
+    
+ bulid > firestore database > rules > 
+ allow read, write: if true;  > click publish
+ 
